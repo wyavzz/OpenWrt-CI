@@ -57,14 +57,6 @@ jobs:
           # ln -s /mnt/openwrt/staging_dir ./staging_dir
 
           df -h
-
-      - name: add plugin
-        run: |
-          cd package
-          mkdir openwrt-packages
-          cd openwrt-packages
-          git clone https://github.com/kenzok8/openwrt-packages.git
-          git clone https://github.com/kenzok8/small.git
           
       - name: Update feeds
         run: |
