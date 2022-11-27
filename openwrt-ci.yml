@@ -86,6 +86,7 @@ jobs:
           CONFIG_PACKAGE_boost-date_time=y
           CONFIG_PACKAGE_boost-program_options=y
           CONFIG_PACKAGE_boost-system=y
+          CONFIG_PACKAGE_brook=y
           CONFIG_PACKAGE_chinadns-ng=y
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_haproxy=y
@@ -94,17 +95,26 @@ jobs:
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           CONFIG_PACKAGE_iptables-mod-iprange=y
           CONFIG_PACKAGE_iptables-mod-socket=y
+          CONFIG_PACKAGE_kcptun-client=y
+          CONFIG_PACKAGE_kcptun-config=y
           # CONFIG_PACKAGE_kmod-crypto-kpp is not set
           CONFIG_PACKAGE_kmod-ifb=y
           CONFIG_PACKAGE_kmod-inet-diag=y
           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
           CONFIG_PACKAGE_kmod-ipt-iprange=y
           CONFIG_PACKAGE_kmod-ipt-socket=y
+          CONFIG_PACKAGE_kmod-nf-log6=y
+          CONFIG_PACKAGE_kmod-nf-reject6=y
           CONFIG_PACKAGE_kmod-nf-socket=y
+          CONFIG_PACKAGE_kmod-nft-core=y
+          CONFIG_PACKAGE_kmod-nft-nat=y
+          CONFIG_PACKAGE_kmod-nft-socket=y
+          CONFIG_PACKAGE_kmod-nft-tproxy=y
           CONFIG_PACKAGE_kmod-sched-core=y
           # CONFIG_PACKAGE_kmod-wireguard is not set
           CONFIG_PACKAGE_libcap-bin=y
           CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
+          CONFIG_PACKAGE_libevent2=y
           CONFIG_PACKAGE_libltdl=y
           CONFIG_PACKAGE_liblua5.3=y
           CONFIG_PACKAGE_libmaxminddb=y
@@ -115,14 +125,47 @@ jobs:
           CONFIG_PACKAGE_luasocket=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-bypass=y
+          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Hysteria=y
+          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_NaiveProxy=y
+          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks5_Proxy=y
+          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_V2ray_plugin=y
           CONFIG_PACKAGE_luci-app-eqos=y
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-passwall2=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Brook=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Hysteria=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_NaiveProxy=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_ShadowsocksR_Libev_Server=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Libev_Server=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Client=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Server=y
+          CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray=y
+          CONFIG_PACKAGE_luci-app-passwall2_Transparent_Proxy=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
           CONFIG_PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy=y
+          CONFIG_PACKAGE_luci-app-passwall_Nftables_Transparent_Proxy=y
           CONFIG_PACKAGE_luci-app-smartdns=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-vssr=y
+          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Kcptun=y
           # CONFIG_PACKAGE_luci-app-wireguard is not set
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
@@ -132,6 +175,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-eqos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-passwall2-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-vssr-zh-cn=y
@@ -139,7 +183,9 @@ jobs:
           # CONFIG_PACKAGE_luci-proto-wireguard is not set
           CONFIG_PACKAGE_luci-theme-argonne=y
           CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_naiveproxy=y
           CONFIG_PACKAGE_netdata=y
+          CONFIG_PACKAGE_redsocks2=y
           CONFIG_PACKAGE_ruby=y
           CONFIG_PACKAGE_ruby-bigdecimal=y
           CONFIG_PACKAGE_ruby-date=y
@@ -151,13 +197,18 @@ jobs:
           CONFIG_PACKAGE_ruby-stringio=y
           CONFIG_PACKAGE_ruby-strscan=y
           CONFIG_PACKAGE_ruby-yaml=y
+          CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
+          CONFIG_PACKAGE_shadowsocks-rust-ssserver=y
           CONFIG_PACKAGE_smartdns=y
           CONFIG_PACKAGE_tc-tiny=y
           CONFIG_PACKAGE_trojan=y
+          CONFIG_PACKAGE_trojan-go=y
           CONFIG_PACKAGE_trojan-plus=y
           CONFIG_PACKAGE_unzip=y
           CONFIG_PACKAGE_uugamebooster=y
           CONFIG_PACKAGE_v2ray-core=y
+          CONFIG_PACKAGE_v2ray-geoip=y
+          CONFIG_PACKAGE_v2ray-geosite=y
           CONFIG_PACKAGE_v2ray-plugin=y
           # CONFIG_PACKAGE_wireguard-tools is not set
           CONFIG_PACKAGE_xray-plugin=y
