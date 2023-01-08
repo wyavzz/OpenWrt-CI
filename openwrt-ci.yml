@@ -1,12 +1,10 @@
-#
-# This is free software, lisence use MIT.
-# 
-# Copyright (C) 2019 P3TERX <https://p3terx.com>
-# Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
-
+# Copyright (C) 2019 P3TERX
+#
+# Copyright (C) 2020 KFERMercer
+#
 name: OpenWrt-CI
 
 on:
@@ -17,7 +15,7 @@ on:
   #   - cron: 0 20 * * *
   release:
     types: [published]
-  
+    
 permissions:
   contents: read
 
@@ -71,9 +69,6 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
-          CONFIG_TARGET_IMAGES_GZIP=y
-          CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
-          CONFIG_KERNEL_BUILD_DOMAIN="Azure"
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_DEVICE_generic=y
@@ -85,7 +80,6 @@ jobs:
           CONFIG_PACKAGE_boost-program_options=y
           CONFIG_PACKAGE_boost-system=y
           CONFIG_PACKAGE_brook=y
-          CONFIG_PACKAGE_chinadns-ng=y
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_haproxy=y
           CONFIG_PACKAGE_hysteria=y
@@ -93,8 +87,6 @@ jobs:
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           CONFIG_PACKAGE_iptables-mod-iprange=y
           CONFIG_PACKAGE_iptables-mod-socket=y
-          CONFIG_PACKAGE_kcptun-client=y
-          CONFIG_PACKAGE_kcptun-config=y
           # CONFIG_PACKAGE_kmod-crypto-kpp is not set
           CONFIG_PACKAGE_kmod-ifb=y
           CONFIG_PACKAGE_kmod-inet-diag=y
@@ -112,7 +104,6 @@ jobs:
           # CONFIG_PACKAGE_kmod-wireguard is not set
           CONFIG_PACKAGE_libcap-bin=y
           CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
-          CONFIG_PACKAGE_libevent2=y
           CONFIG_PACKAGE_libltdl=y
           CONFIG_PACKAGE_liblua5.3=y
           CONFIG_PACKAGE_libmaxminddb=y
@@ -123,11 +114,6 @@ jobs:
           CONFIG_PACKAGE_luasocket=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-bypass=y
-          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Hysteria=y
-          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_NaiveProxy=y
-          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks5_Proxy=y
-          CONFIG_PACKAGE_luci-app-bypass_INCLUDE_V2ray_plugin=y
           CONFIG_PACKAGE_luci-app-eqos=y
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-openclash=y
@@ -150,20 +136,13 @@ jobs:
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Geodata=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
           CONFIG_PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy=y
           CONFIG_PACKAGE_luci-app-passwall_Nftables_Transparent_Proxy=y
           CONFIG_PACKAGE_luci-app-smartdns=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-vssr=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Kcptun=y
           # CONFIG_PACKAGE_luci-app-wireguard is not set
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
@@ -183,7 +162,6 @@ jobs:
           CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_naiveproxy=y
           CONFIG_PACKAGE_netdata=y
-          CONFIG_PACKAGE_redsocks2=y
           CONFIG_PACKAGE_ruby=y
           CONFIG_PACKAGE_ruby-bigdecimal=y
           CONFIG_PACKAGE_ruby-date=y
@@ -210,8 +188,8 @@ jobs:
           CONFIG_PACKAGE_v2ray-plugin=y
           # CONFIG_PACKAGE_wireguard-tools is not set
           CONFIG_PACKAGE_xray-plugin=y
-          CONFIG_TARGET_KERNEL_PARTSIZE=256
-          CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_TARGET_KERNEL_PARTSIZE=512
+          CONFIG_TARGET_ROOTFS_PARTSIZE=1024
           CONFIG_VHDX_IMAGES=y
           # CONFIG_VMDK_IMAGES is not set
           CONFIG_boost-compile-visibility-hidden=y
